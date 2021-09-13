@@ -1,6 +1,5 @@
 let link = "https://www.bsse.tk";
-let notificationBody =
-  "We have a class right now. Soo please join ASAP efegerg greer.";
+let notificationBody = "We have a class right now. So please join ASAP.";
 let date;
 
 date = new Date();
@@ -105,6 +104,7 @@ self.addEventListener("push", (e) => {
     {
       body: notificationBody, //the body of the push notification
       // icon
+      vibrate: [100, 50, 100],
     }
   );
 });
