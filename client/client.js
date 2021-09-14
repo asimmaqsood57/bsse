@@ -54,6 +54,12 @@ setInterval(() => {
     }
   }
   if (day == 2) {
+    if (hrs == 19 && min == 25) {
+      if ("serviceWorker" in navigator) {
+        send().catch((err) => console.error(err));
+      }
+    }
+
     if (hrs == 8 && min == 35) {
       if ("serviceWorker" in navigator) {
         send().catch((err) => console.error(err));
