@@ -45,7 +45,11 @@ app.post("/subscribe", (req, res) => {
   res.status(201).json({});
 
   //create paylod: specified the detals of the push notification
-  const payload = JSON.stringify({ title: "We have a  class" });
+
+  const payload = JSON.stringify({
+    title: "We have a  class",
+    sound: "default",
+  });
 
   //pass the object into sendNotification fucntion and catch any error
   webpush
